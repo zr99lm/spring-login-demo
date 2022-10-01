@@ -13,7 +13,7 @@ public class UserDao {
         if(this.username.equals(username)){
             user=new User();
             user.setUsername(username);
-            user.setPwd(pwd);
+            user.setPwd(this.pwd);
             return user;
         }
         else {

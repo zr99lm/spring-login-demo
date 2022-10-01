@@ -18,11 +18,13 @@ public class UserService {
             System.out.println("用户名活密码不能为空");
             messageModule.setResult(0);
             messageModule.setMessageResult("用户名活密码不能为空");
+            return messageModule;
         }
         User user = userDao.queryUserByUserName(name);
         if (user == null) {
             messageModule.setMessageResult("用户名不存在");
             messageModule.setResult(0);
+            return messageModule;
         }
         if (!pwd.equals(user.getPwd())) {
             messageModule.setResult(0);
