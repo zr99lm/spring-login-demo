@@ -29,6 +29,7 @@ public class UserService {
         if (!pwd.equals(user.getPwd())) {
             messageModule.setResult(0);
             messageModule.setMessageResult("密码不正确");
+            System.out.println("-----------");
         }
         return messageModule;
     }
