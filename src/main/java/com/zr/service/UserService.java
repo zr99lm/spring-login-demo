@@ -24,6 +24,7 @@ public class UserService {
         if (user == null) {
             messageModule.setMessageResult("用户名不存在");
             messageModule.setResult(0);
+            System.out.println("---------------");
             return messageModule;
         }
         if (!pwd.equals(user.getPwd())) {
